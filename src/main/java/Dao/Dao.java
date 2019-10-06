@@ -11,5 +11,5 @@ public interface Dao {
 
     void creatStudent(Student student);
 
-    List<?> getStudentByGroup(Group group);
+    List<?> getStudentByGroup(String nameGroup);
 }

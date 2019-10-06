@@ -9,7 +9,7 @@ public interface Service {
 
     void addStudent(Student student);
 
-    String getStudentsByGroup(Group group);
+    String getStudentsByGroup(String nameGroup);
 
 
 }

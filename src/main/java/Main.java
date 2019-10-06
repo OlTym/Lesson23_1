@@ -60,9 +60,9 @@ public class Main {
         service.addGroup(groupPhp);
         service.addGroup(groupRuby);
 
-        System.out.println(service.getStudentsByGroup(groupRuby));
-        System.out.println(service.getStudentsByGroup(groupJava));
-        System.out.println(service.getStudentsByGroup(groupPhp));
+        System.out.println(service.getStudentsByGroup("ruby"));
+        System.out.println(service.getStudentsByGroup("java"));
+        System.out.println(service.getStudentsByGroup("php"));
 
     }
 }

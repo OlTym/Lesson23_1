@@ -21,12 +21,12 @@ public class ServiceEntity implements Service {
         dao.creatStudent(student);
     }
 
-    public String getStudentsByGroup(Group group) {
+    public String getStudentsByGroup(String nameGroup) {
         Dao dao = new DaoEntity();
-        List<?> list = dao.getStudentByGroup(group);
+        List<?> list = dao.getStudentByGroup(nameGroup);
         final StringBuilder stringBuilder = new StringBuilder();
 
-        stringBuilder.append("Group ").append(group.getName()).append("\n");
+        stringBuilder.append("Group ").append(nameGroup).append("\n");
 
 
         for (int i = 0; i < list.size(); i++) {

@@ -30,13 +30,15 @@ public class DaoEntity implements Dao {
         }
     }
 
-    public List<?> getStudentByGroup(Group group) {
+    public List<?> getStudentByGroup(String nameGroup) {
         try (Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
 
-            List<?> list = session.createQuery("From Student as s inner join Group as g on s.group = g.id where g.name=:name")
-                    .setParameter("name", group.getName()).list();
+           return session.createQuery("From Student as s inner join Group as g " +
+                    "on s.group = g.id where lower(g.name)=lower(:name)")
+                    .setParameter("name",nameGroup)
+                    .list();
 
-            return list;
+
         }
 
 
